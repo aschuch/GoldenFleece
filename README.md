@@ -8,12 +8,42 @@ A collection of extensions of common types for the [Argo](https://github.com/tho
 
 # Usage
 
+Given the following JSON, GoldenFleece lets us directly parse an `NSURL` from the `profile_picture` and a `CLLocation` from the `location` using Argo/Runes. 
+
+```json
+{
+	"name": "Alex",
+	"profile_picture": "http://example.com/picture.png",
+	"location": {
+		"lat": 48.11,
+		"lon": 16.55
+	}
+}
+```
+
 ```swift
 import Argo
 import Runes
 import GoldenFleece
 
-TODO
+struct User {
+    let name: String
+    let profilePictureURL: NSURL
+    let location: CLLocation
+}
+
+extension User: JSONDecodable {
+    static func create(name: String)(profilePictureURL: NSURL)(location: CLLocation) -> User {
+        return self(name: name, profilePictureURL: profilePictureURL, location: location)
+    }
+    
+    static func decode(j: JSONValue) -> User? {
+        return User.create
+            <^> j <| "name"
+            <*> j <| "profile_picture"	// directly decodes String into NSURL
+            <*> j <| "location"			// directly decodes location into CLLocation
+    }
+}
 ```
 
 ## `JSONDecodeable` Extensions
