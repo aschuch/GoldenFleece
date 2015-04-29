@@ -8,21 +8,23 @@
 
 import CoreLocation
 import Argo
+import Runes
 
-extension CLLocation: JSONDecodable {
+extension CLLocation: Decodable {
     public typealias DecodedType = CLLocation
     
-    public class func decode(j: JSONValue) -> DecodedType? {
+    public class func decode(j: JSON) -> Decoded<CLLocation> {
         switch j {
-        case .JSONObject(let dict):
+        case .Object(let dict):
             switch (dict["lat"], dict["lon"]) {
-            case (.Some(.JSONNumber(let lat)), .Some(.JSONNumber(let lon))):
-                return CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue)
+            case (.Some(.Number(let lat)), .Some(.Number(let lon))):
+                let location = CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue)
+                return pure(location)
             default:
-                return .None
+                return .MissingKey("`lat` and/or `lon` not found")
             }
         default:
-            return .None
+            return .TypeMismatch("\(j) could not be decoded to CLLocation")
         }
     }
 }

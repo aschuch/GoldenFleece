@@ -9,13 +9,15 @@
 import UIKit
 import Argo
 
-extension NSURL: JSONDecodable {
+extension NSURL: Decodable {
     public typealias DecodedType = NSURL
     
-    public class func decode(j: JSONValue) -> DecodedType? {
+    public class func decode(j: JSON) -> Decoded<NSURL> {
         switch j {
-        case .JSONString(let url): return NSURL(string: url)
-        default: return .None
+        case .String(let url):
+            return NSURL(string: url).map(pure) ?? .TypeMismatch("`\(url)` could not be decoded to NSURL")
+        default:
+            return .TypeMismatch("\(j) could not be decoded to NSURL")
         }
     }
 }

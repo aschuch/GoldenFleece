@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0302FC1AF05C6000EE0130 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302F91AF05C6000EE0130 /* Argo.framework */; };
+		4D0302FD1AF05C6000EE0130 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302F91AF05C6000EE0130 /* Argo.framework */; };
+		4D0302FE1AF05C6000EE0130 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FA1AF05C6000EE0130 /* Box.framework */; };
+		4D0302FF1AF05C6000EE0130 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FA1AF05C6000EE0130 /* Box.framework */; };
+		4D0303001AF05C6000EE0130 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FB1AF05C6000EE0130 /* Runes.framework */; };
+		4D0303011AF05C6000EE0130 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FB1AF05C6000EE0130 /* Runes.framework */; };
+		4D0303021AF05C6A00EE0130 /* Argo.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302F91AF05C6000EE0130 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D0303031AF05C6A00EE0130 /* Box.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FA1AF05C6000EE0130 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D0303041AF05C6A00EE0130 /* Runes.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FB1AF05C6000EE0130 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D0303051AF05C7200EE0130 /* Argo.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302F91AF05C6000EE0130 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D0303061AF05C7200EE0130 /* Box.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FA1AF05C6000EE0130 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D0303071AF05C7200EE0130 /* Runes.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0302FB1AF05C6000EE0130 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D743B101ACEEDF40023A79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D743B0F1ACEEDF40023A79A /* AppDelegate.swift */; };
 		4D743B121ACEEDF40023A79A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D743B111ACEEDF40023A79A /* ViewController.swift */; };
 		4D743B151ACEEDF40023A79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D743B131ACEEDF40023A79A /* Main.storyboard */; };
@@ -19,12 +31,6 @@
 		4D743B4C1ACEEDFE0023A79A /* GoldenFleece.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B341ACEEDFE0023A79A /* GoldenFleece.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D743B561ACEEE2D0023A79A /* CLLocation+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D743B541ACEEE2D0023A79A /* CLLocation+Argo.swift */; };
 		4D743B571ACEEE2D0023A79A /* NSURL+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D743B551ACEEE2D0023A79A /* NSURL+Argo.swift */; };
-		4D743B5A1ACEEF630023A79A /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B581ACEEF630023A79A /* Argo.framework */; };
-		4D743B5B1ACEEF630023A79A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B591ACEEF630023A79A /* Runes.framework */; };
-		4D743B5D1ACEEF8F0023A79A /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B581ACEEF630023A79A /* Argo.framework */; };
-		4D743B5E1ACEEF8F0023A79A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B591ACEEF630023A79A /* Runes.framework */; };
-		4D906FB91ACEF3F100ECD5F2 /* Argo.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B581ACEEF630023A79A /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D906FBA1ACEF3F100ECD5F2 /* Runes.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 4D743B591ACEEF630023A79A /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4D0302F61AF05BE700EE0130 /* Copy Carthage Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D0303021AF05C6A00EE0130 /* Argo.framework in Copy Carthage Frameworks */,
+				4D0303031AF05C6A00EE0130 /* Box.framework in Copy Carthage Frameworks */,
+				4D0303041AF05C6A00EE0130 /* Runes.framework in Copy Carthage Frameworks */,
+			);
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D743B501ACEEDFE0023A79A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,8 +88,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D906FB91ACEF3F100ECD5F2 /* Argo.framework in Copy Carthage Frameworks */,
-				4D906FBA1ACEF3F100ECD5F2 /* Runes.framework in Copy Carthage Frameworks */,
+				4D0303051AF05C7200EE0130 /* Argo.framework in Copy Carthage Frameworks */,
+				4D0303061AF05C7200EE0130 /* Box.framework in Copy Carthage Frameworks */,
+				4D0303071AF05C7200EE0130 /* Runes.framework in Copy Carthage Frameworks */,
 			);
 			name = "Copy Carthage Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +98,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D0302F91AF05C6000EE0130 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		4D0302FA1AF05C6000EE0130 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		4D0302FB1AF05C6000EE0130 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		4D743B0A1ACEEDF40023A79A /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D743B0E1ACEEDF40023A79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D743B0F1ACEEDF40023A79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +116,6 @@
 		4D743B471ACEEDFE0023A79A /* GoldenFleeceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenFleeceTests.swift; sourceTree = "<group>"; };
 		4D743B541ACEEE2D0023A79A /* CLLocation+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Argo.swift"; sourceTree = "<group>"; };
 		4D743B551ACEEE2D0023A79A /* NSURL+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Argo.swift"; sourceTree = "<group>"; };
-		4D743B581ACEEF630023A79A /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
-		4D743B591ACEEF630023A79A /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D743B5A1ACEEF630023A79A /* Argo.framework in Frameworks */,
-				4D743B5B1ACEEF630023A79A /* Runes.framework in Frameworks */,
+				4D0302FE1AF05C6000EE0130 /* Box.framework in Frameworks */,
+				4D0303001AF05C6000EE0130 /* Runes.framework in Frameworks */,
+				4D0302FC1AF05C6000EE0130 /* Argo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +141,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0303011AF05C6000EE0130 /* Runes.framework in Frameworks */,
 				4D743B3F1ACEEDFE0023A79A /* GoldenFleece.framework in Frameworks */,
-				4D743B5D1ACEEF8F0023A79A /* Argo.framework in Frameworks */,
-				4D743B5E1ACEEF8F0023A79A /* Runes.framework in Frameworks */,
+				4D0302FF1AF05C6000EE0130 /* Box.framework in Frameworks */,
+				4D0302FD1AF05C6000EE0130 /* Argo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +232,9 @@
 		4D743B5C1ACEEF700023A79A /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				4D743B581ACEEF630023A79A /* Argo.framework */,
-				4D743B591ACEEF630023A79A /* Runes.framework */,
+				4D0302F91AF05C6000EE0130 /* Argo.framework */,
+				4D0302FA1AF05C6000EE0130 /* Box.framework */,
+				4D0302FB1AF05C6000EE0130 /* Runes.framework */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
@@ -274,6 +298,7 @@
 				4D743B3A1ACEEDFE0023A79A /* Sources */,
 				4D743B3B1ACEEDFE0023A79A /* Frameworks */,
 				4D743B3C1ACEEDFE0023A79A /* Resources */,
+				4D0302F61AF05BE700EE0130 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);

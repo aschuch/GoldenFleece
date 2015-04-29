@@ -17,30 +17,32 @@ class GoldenFleeceTests: XCTestCase {
     func testNSURL() {
         let urlString = "http://example.com"
         let json = ["url": urlString]
-        let j = JSONValue.parse(json)
+        let j = JSON.parse(json)
         
-        let url: NSURL? = j <| "url"
-        XCTAssertNotNil(url, "url is nil")
-        XCTAssertEqual(url!.absoluteString!, urlString, "url output != url input")
+        let url: Decoded<NSURL> = j <| "url"
+        XCTAssertNotNil(url.value, "url is nil")
+        XCTAssertEqual(url.value!.absoluteString!, urlString, "url output != url input")
     }
     
     func testCLLocation() {
         let lat = 11.44384
         let lon = 22.55897
         
-        let json = [
-            "location": [
-                "lat": lat,
-                "lon": lon
-            ]
+        let jsons = [
+            [ "location": [ "lat": lat, "lon": lon ] ],
+            //[ "location": [ "latitude": lat, "longitude": lon ] ],
+            //[ "location": [ lat, lon ] ]
         ]
         
-        let j = JSONValue.parse(json)
+        for json in jsons {
+            let j = JSON.parse(json)
+            
+            let location: Decoded<CLLocation> = j <| "location"
+            XCTAssertNotNil(location.value, "location is nil")
+            XCTAssertEqual(location.value!.coordinate.latitude, lat, "lat output != lat input")
+            XCTAssertEqual(location.value!.coordinate.longitude, lon, "lon output != lon input")
+        }
         
-        let location: CLLocation? = j <| "location"
-        XCTAssertNotNil(location, "location is nil")
-        XCTAssertEqual(location!.coordinate.latitude, lat, "lat output != lat input")
-        XCTAssertEqual(location!.coordinate.longitude, lon, "lon output != lon input")
     }
     
 }

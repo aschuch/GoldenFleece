@@ -32,12 +32,12 @@ struct User {
     let location: CLLocation
 }
 
-extension User: JSONDecodable {
+extension User: Decodable {
     static func create(name: String)(profilePictureURL: NSURL)(location: CLLocation) -> User {
         return self(name: name, profilePictureURL: profilePictureURL, location: location)
     }
     
-    static func decode(j: JSONValue) -> User? {
+    static func decode(j: JSON) -> Decoded<User> {
         return User.create
             <^> j <| "name"
             <*> j <| "profile_picture"	// directly decodes String into NSURL
@@ -46,7 +46,7 @@ extension User: JSONDecodable {
 }
 ```
 
-## `JSONDecodeable` Extensions
+## `Decodeable` Extensions
 
 GoldenFleece collects helpful extensions for common types to be directly used with Argo/Runes. Currently only a handful extensions are supported, but pull requests are more than welcome.
 
